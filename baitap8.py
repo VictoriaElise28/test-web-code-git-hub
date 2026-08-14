@@ -58,3 +58,34 @@ mat_khau = "".join(mat_khau_list)
 
 print("Kết quả (ví dụ):")
 print(mat_khau)
+
+
+# Bài 6
+import random
+import string
+
+do_dai = int(input("Nhập: "))
+
+if do_dai < 4:
+    print("Cần ít nhất 4 ký tự!")
+else:
+    chu_thuong = string.ascii_lowercase
+    chu_hoa = string.ascii_uppercase
+    chu_so = string.digits
+    ky_tu_dac_biet = string.punctuation
+
+    tat_ca = chu_thuong + chu_hoa + chu_so + ky_tu_dac_biet
+    mat_khau_list = [
+        random.choice(chu_thuong),
+        random.choice(chu_hoa),
+        random.choice(chu_so),
+        random.choice(ky_tu_dac_biet)
+    ]
+    for i in range(do_dai - 4):
+        mat_khau_list.append(random.choice(tat_ca))
+
+    random.shuffle(mat_khau_list)
+    mat_khau = "".join(mat_khau_list)
+
+    print("Kết quả:")
+    print(mat_khau)
