@@ -89,3 +89,17 @@ else:
 
     print("Kết quả:")
     print(mat_khau)
+    
+    
+    # Bài 7
+import random
+import string
+kho_ky_tu = string.ascii_letters + string.digits + string.punctuation
+
+print("Kết quả (ví dụ):")
+for i in range(1, 4):
+    mat_khau = ""
+    for j in range(10):
+        mat_khau += random.choice(kho_ky_tu)
+    
+    print(f"{i}. {mat_khau}")
